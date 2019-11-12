@@ -1,7 +1,9 @@
 This an example of a simple application with: 
  - a front-end served by a Koa server
  - a back-end API
- - a configuration to run on CircleCI
+ - a configuration to run on CircleCI (TODO: Not implemented yet!)
+
+The backend API returns today's date in text format 
 
 ## Available Scripts (npm)
 
@@ -27,6 +29,10 @@ The static part of the serve will serve files located into the `build` folder.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
 Use Postman to test the API enpoints available like [http://localhost:3000/api/now](http://localhost:3000/api/now) for example
+
+## References
+https://medium.com/hackernoon/serving-react-and-koa-together-720ba6668298 
+
 
 ## Available Scripts (yarn)
 

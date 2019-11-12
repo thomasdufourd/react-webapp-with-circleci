@@ -1,16 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import Frontpage from './Frontpage/Frontpage';
+import ApiDateResourceProvider from './ApiDateResourceProvider/ApiDateResourceProvider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to your application
-        </p>
-      </header>
+    <div>
+        <ApiDateResourceProvider>
+          <Frontpage logo={logo}/>
+        </ApiDateResourceProvider>
     </div>
   );
 }

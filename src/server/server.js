@@ -46,10 +46,11 @@ app.use(healthcheck);
 */
 const now = router.get('/api/now',
   (ctx) => {
-      console.log("Now handler", ctx.path);
-      console.log(ctx.query);
+      console.log('path: ', ctx.path);
+      console.log('query: ', ctx.query);
       ctx.status = HttpStatus.OK;
-      ctx.body = new Date();
+      const date = new Date();
+      ctx.body = `{"today": "${date}"}`;
 })
 app.use(now);
 
