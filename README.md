@@ -1,6 +1,7 @@
 This an example of a simple application with: 
  - a front-end served by a Koa server
  - a back-end API
+ - a _mocking_ folder to mock data fetched from the API (see `Mocking` under)
  - a configuration to run on CircleCI (TODO: Not implemented yet!)
 
 The backend API returns today's date in text format 
@@ -23,6 +24,28 @@ This command will build your application into the `/build` folder
 
 This will run your application as it should run on the server. You need to rund the build before that (`npm run-script build`)
 The static part of the serve will serve files located into the `build` folder.
+
+
+## Mocking
+
+To start mocking Http response from `fetch()` we need to: 
+ - install `fetch-mock` as a dev dependency, like this: `npm install --save-dev fetch-mock`
+ - add a _run mock_ script to your `package.json`, like this: `"mock": "REACT_APP_MOCK=true npm start"`
+ - update the `index.js` file so it checks if the application is started in _mock_ mode or not (the _normal_ mode). To do so, test if the environment variable `REACT_APP_MOCK` is `true` (see explanations under)
+ - create a `mocking` folder with two files: 
+  - `mock.js`: where the URLs that should be mocked are specified
+  - `*.json`: the mock data you want the URL/endpoint to return to your application 
+ - Start the application like this: `npm run mock`   
+
+
+### Using `REACT_APP_MOCK` environment variable
+
+insert the following code to your `index.js`
+```
+  if (process.env.REACT_APP_MOCK) {
+          require('./mocking/mock');
+  }
+```
 
 ## Local testing
 
