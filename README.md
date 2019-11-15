@@ -9,7 +9,7 @@ The backend API returns today's date in text format
 
 ## Where to start
 
-First, import the dependencies: `npm install`, then start the application localy, by running either: `npm start`, `npm run mock` or `npm run-script build` _and_ `node src/server/server.js` (see _Local testing (manualy_) under
+First, import the dependencies: `npm install`, then start the application localy, by running either: `npm start`, `npm run mock` or `npm run-script build` _and_ `node src/server/server.js` (see _Local testing (manualy_) here under)
 
 
 ## Local testing (manualy)
