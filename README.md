@@ -9,14 +9,14 @@ The backend API returns today's date in text format
 
 ## Where to start
 
-First, import the dependencies: `npm install`, then start the application localy, by running either: `npm start`, `npm run mock` or `npm run-script build` _and_ `node src/server/server.js` (see _Local testing (manualy_ under)
+First, import the dependencies: `npm install`, then start the application localy, by running either: `npm start`, `npm run mock` or `npm run-script build` _and_ `node src/server/server.js` (see _Local testing (manualy_) under
 
 
 ## Local testing (manualy)
 
 ### Test the front-end (without any _real_ integration with back-end)
 
-You might need to add some _mock_ data. Update `mocking/mock.json` for behaviour and `*.json` for the data. 
+You might need to add some _mock_ data. Update `mocking/mock.json` for behaviour and `*.json` for the data (see _Mocking_ here under)
 
 Then run your application like this: `npm run mock`
 
@@ -27,6 +27,7 @@ Test on this URL: http://localhost:3000/
 In this case you need to run both back-end and front-end at the same time. This can be done in two steps: 
  - 1: build the application with `npm run-script build`
  - 2: run/start the server `node src/server/server.js`
+
 Test on this URL: http://localhost:3000/ or, if your want to test the output from the API (the back-end), go to http://localhost:3000/api/ (+ the name of endpoint) 
 
 ### Test the back-end
